@@ -28,19 +28,18 @@ def make_clickable(name, link):
 def main():
     #image = Image.open("input/wordcloud.png").resize((680, 150))
     #st.image(image)
-    st.markdown("# *Recipe Ingredients Recommender System? :cooking:*")
+    st.markdown("# *Recipe Recommender System? :cooking:*")
 
     st.markdown(
         "An ML powered app by The Cloud Collective <a href='https://github.com/ongjoel/recsysproject' > <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/600px-Octicons-mark-github.svg.png' width='20' height='20' > </a> ",
         unsafe_allow_html=True,
     )
     st.markdown(
-        "## Given a list of ingredients :tomato: "
+        "## Feel like cooking something today based on the ingredients:tomato: you have at home?:house: "
     )
     st.markdown(
-        "What recipes can you cook at home? :house: Our ML-based model will scan through almost 100,000 recipes to recommend suitable ones... :mag: Try it below! :arrow_down:"
-    )
-
+        "## Our ML-based model will scan through almost 100,000 recipes to recommend suitable ones... :mag: Try it below! :arrow_down:"
+    
     st.text("")
 
     session_state = SessionState.get(
