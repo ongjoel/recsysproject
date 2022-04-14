@@ -4,6 +4,6 @@ PARSED_PATH = "./input/df_parsed.csv"
 TFIDF_ENCODING_PATH = "models/tfidf_encodings.pkl"
 TFIDF_MODEL_PATH = "models/tfidf.pkl"
 
-LINUX_PATH = "/Visual Studio/whatscooking-deployment-master/"
-OS_PATH = "/Visual Studio/whatscooking-deployment-master/"
+LINUX_PATH = "/Visual Studio/recsysproject/"
+OS_PATH = "/Visual Studio/recsysproject/"
 
