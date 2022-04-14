@@ -26,19 +26,19 @@ def make_clickable(name, link):
 
 
 def main():
-    image = Image.open("input/wordcloud.png").resize((680, 150))
-    st.image(image)
+    #image = Image.open("input/wordcloud.png").resize((680, 150))
+    #st.image(image)
     st.markdown("# *What's Cooking? :cooking:*")
 
     st.markdown(
-        "An ML powered app by The Cloud Collective <a href='https://github.com/jackmleitch/whatscooking-deployment' > <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/600px-Octicons-mark-github.svg.png' width='20' height='20' > </a> ",
+        "An ML powered app by The Cloud Collective <a href='https://github.com/ongjoel/recsysproject' > <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/600px-Octicons-mark-github.svg.png' width='20' height='20' > </a> ",
         unsafe_allow_html=True,
     )
     st.markdown(
         "## Given a list of ingredients, what different recipes can I can make? :tomato: "
     )
     st.markdown(
-        "For example, say I want to use up some food in my apartment, what can I cook? :house: My ML based model will look through over 4500 recipes to find matches for you... :mag: Try it out for yourself below! :arrow_down:"
+        "For example, say I want to use up some food in my apartment, what can I cook? :house: My ML based model will look through almost 100,000 recipes to find matches for you... :mag: Try it out for yourself below! :arrow_down:"
     )
 
     st.text("")
@@ -52,7 +52,7 @@ def main():
     )
 
     ingredients = st.text_input(
-        "Enter ingredients you would like to cook with (seperate ingredients with a comma)",
+        "Enter ingredients you would like to cook with (seperated with a comma)",
         "onion, chorizo, chicken thighs, paella rice, frozen peas, prawns",
     )
     session_state.execute_recsys = st.button("Give me recommendations!")
@@ -115,7 +115,7 @@ def main():
             for ingred in ingredients_disp2:
                 col2.markdown(f"* {ingred}")
             # st.write(f"Score: {selection_details.score.values[0]}")
-
+"""
     # sidebar stuff
     with st.sidebar.beta_expander("How it works?", expanded=True):
         st.markdown("## How it works? :thought_balloon:")
@@ -134,7 +134,7 @@ def main():
         st.markdown(
             f"3. [Building a Recipe Recommendation System Using Word2Vec, Scikit-Learn, and Streamlit]({blog3})"
         )
-
+"""
 
 if __name__ == "__main__":
     main()
