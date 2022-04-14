@@ -38,8 +38,11 @@ def main():
         "## Feel like cooking something today based on the ingredients:tomato: you have at home?:house: "
     )
     st.markdown(
-        "## Our ML-based model will scan through almost 100,000 recipes to recommend suitable ones... :mag: Try it below! :arrow_down:"
+        "## Our ML-based model will scan through almost 100,000 recipes to recommend suitable ones... :mag: "
     )
+    st.markdown(
+        "## Try it below! :arrow_down:"
+    )    
     st.text("")
 
     session_state = SessionState.get(
