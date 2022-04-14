@@ -28,17 +28,17 @@ def make_clickable(name, link):
 def main():
     #image = Image.open("input/wordcloud.png").resize((680, 150))
     #st.image(image)
-    st.markdown("# *What's Cooking? :cooking:*")
+    st.markdown("# *Recipe Ingredients Recommender System? :cooking:*")
 
     st.markdown(
         "An ML powered app by The Cloud Collective <a href='https://github.com/ongjoel/recsysproject' > <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/600px-Octicons-mark-github.svg.png' width='20' height='20' > </a> ",
         unsafe_allow_html=True,
     )
     st.markdown(
-        "## Given a list of ingredients, what different recipes can I can make? :tomato: "
+        "## Given a list of ingredients :tomato: "
     )
     st.markdown(
-        "For example, say I want to use up some food in my apartment, what can I cook? :house: My ML based model will look through almost 100,000 recipes to find matches for you... :mag: Try it out for yourself below! :arrow_down:"
+        "What recipes can you cook at home? :house: Our ML-based model will scan through almost 100,000 recipes to recommend suitable ones... :mag: Try it below! :arrow_down:"
     )
 
     st.text("")
@@ -53,9 +53,9 @@ def main():
 
     ingredients = st.text_input(
         "Enter ingredients you would like to cook with (seperated with a comma)",
-        "onion, chorizo, chicken thighs, paella rice, frozen peas, prawns",
+        "butter, chicken, rice, prawns, carrots, garlic",
     )
-    session_state.execute_recsys = st.button("Give me recommendations!")
+    session_state.execute_recsys = st.button("Show me what you've got!")
 
     if session_state.execute_recsys:
 
