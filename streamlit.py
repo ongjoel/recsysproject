@@ -39,7 +39,7 @@ def main():
     )
     st.markdown(
         "## Our ML-based model will scan through almost 100,000 recipes to recommend suitable ones... :mag: Try it below! :arrow_down:"
-    
+    )
     st.text("")
 
     session_state = SessionState.get(
