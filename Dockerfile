@@ -1,7 +1,7 @@
 # Include where we get the image from (operating system)
 FROM ubuntu:18.04
 
-MAINTAINER Jack Leitch 'jackmleitch@gmail.com'
+MAINTAINER Joel Ong 'e0685733@gmail.com'
 
 # We cannot press Y so we do it automatically 
 RUN apt-get update && apt-get install -y \
