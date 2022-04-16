@@ -27,7 +27,7 @@ RUN pip3 install -r requirements.txt
 #RUN python3 -c "import nltk; nltk.download('wordnet')"
 
 # CMD executes once the container is started
-ENTRYPOINT ["streamlit","run", "app.py", "--server.port=8080", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit","run", "streamlit.py", "--server.port=8080", "--server.address=0.0.0.0"]
 CMD ["streamlit.py"]
 
     
