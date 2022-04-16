@@ -1,7 +1,7 @@
 # Include where we get the image from (operating system)
-FROM ubuntu:18.04
+FROM python:3.8
 
-MAINTAINER Joel Ong 'e0685733@gmail.com'
+#MAINTAINER Joel Ong 'e0685733@gmail.com'
 
 # We cannot press Y so we do it automatically 
 RUN apt-get update && apt-get install -y \
@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
     sudo \
     && rm -rf /var/lib/apt/lists/*
 
+EXPOSE 8501
 
 # Set working directory 
 WORKDIR /app 
@@ -23,11 +24,11 @@ ADD . /app
 # Install all of the requirements 
 RUN pip3 install -r requirements.txt
 # Download wordnet 
-RUN python3 -c "import nltk; nltk.download('wordnet')"
+#RUN python3 -c "import nltk; nltk.download('wordnet')"
 
 # CMD executes once the container is started
-CMD ["python3", "app.py"]
-
+ENTRYPOINT ["streamlit","run"]
+CMD ["streamlit.py"]
 
     
 
