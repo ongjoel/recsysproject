@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     sudo \
     && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 8501
+EXPOSE 8080
 
 # Set working directory 
 WORKDIR /app 
