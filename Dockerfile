@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     python3 \
     python3-pip \
-    sudo \
+    #sudo \
     && rm -rf /var/lib/apt/lists/*
 
 EXPOSE 8080
@@ -27,7 +27,7 @@ RUN pip3 install -r requirements.txt
 #RUN python3 -c "import nltk; nltk.download('wordnet')"
 
 # CMD executes once the container is started
-ENTRYPOINT ["streamlit","run"]
+ENTRYPOINT ["streamlit","run", "app.py", "--server.port=8080", "--server.address=0.0.0.0"]
 CMD ["streamlit.py"]
 
     
