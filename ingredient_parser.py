@@ -32,14 +32,14 @@ def ingredient_parser(ingreds):
     else:
         ingredients = ast.literal_eval(ingreds)
     # We first get rid of all the punctuation
-    translator = str.maketrans("", "", string.punctuation)
+    #translator = str.maketrans("", "", string.punctuation)
     # initialize nltk's lemmatizer    
-    lemmatizer = WordNetLemmatizer()
-    ingred_list = []
-    for i in ingredients:
-        i.translate(translator)
+    #lemmatizer = WordNetLemmatizer()
+    #ingred_list = []
+    #for i in ingredients:
+        #i.translate(translator)
         # We split up with hyphens as well as spaces
-        items = re.split(" |-", i)
+        #items = re.split(" |-", i)
         # Get rid of words containing non alphabet letters
         #items = [word for word in items if word.isalpha()]
         # Turn everything to lowercase
@@ -55,8 +55,8 @@ def ingredient_parser(ingreds):
         #items = [word for word in items if word not in measures]
         # Get rid of common easy words
         #items = [word for word in items if word not in words_to_remove]
-        if items:
-            ingred_list.append(" ".join(items))
+        #if items:
+            #ingred_list.append(" ".join(items))
     #ingred_list = " ".join(ingred_list)            
     return ingred_list
 
