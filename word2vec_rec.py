@@ -160,7 +160,7 @@ def get_recs(ingredients, N=5, mean=False):
     if model:
         print("Successfully loaded model")
     # load in data
-    data = pd.read_csv("input/df_parsed.csv")
+    data = pd.read_csv("input/df_recipes.csv")
     # parse ingredients
     data["parsed"] = data.ingredients.apply(ingredient_parser)
     
