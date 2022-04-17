@@ -39,7 +39,7 @@ def ingredient_parser(ingreds):
     for i in ingredients:
         i.translate(translator)
         # We split up with hyphens as well as spaces
-        #items = re.split(" |-", i)
+        items = re.split(" |-", i)
         # Get rid of words containing non alphabet letters
         #items = [word for word in items if word.isalpha()]
         # Turn everything to lowercase
