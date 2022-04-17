@@ -163,6 +163,7 @@ def get_recs(ingredients, N=5, mean=False):
     data = pd.read_csv("input/df_parsed.csv")
     # parse ingredients
     data["parsed"] = data.ingredients.apply(ingredient_parser)
+    
     # create corpus
     corpus = get_and_sort_corpus(data)
 
