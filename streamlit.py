@@ -5,17 +5,17 @@ import SessionState
 import os
 from PIL import Image
 
-import config, rec_sys
+import config
 from ingredient_parser import ingredient_parser
 
 from word2vec_rec import get_recs
 
 import nltk
 
-try:
-    nltk.data.find("corpora/wordnet")
-except LookupError:
-    nltk.download("wordnet")
+#try:
+    #nltk.data.find("corpora/wordnet")
+#except LookupError:
+    #nltk.download("wordnet")
 
 
 def make_clickable(name, link):
