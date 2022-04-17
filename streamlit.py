@@ -67,7 +67,7 @@ def main():
         with col2:
             gif_runner = st.image("input/cooking_gif.gif")
         # recipe = rec_sys.RecSys(ingredients)
-        recipe = get_recs(ingredients, mean=True)
+        recipe = get_recs(ingredients, mean=False)
         gif_runner.empty()
         session_state.recipe_df_clean = recipe.copy()
         # link is the column with hyperlinks
