@@ -35,7 +35,7 @@ def ingredient_parser(ingreds):
     #translator = str.maketrans("", "", string.punctuation)
     # initialize nltk's lemmatizer    
     #lemmatizer = WordNetLemmatizer()
-    #ingred_list = []
+    ingred_list = []
     #for i in ingredients:
         #i.translate(translator)
         # We split up with hyphens as well as spaces
@@ -57,7 +57,7 @@ def ingredient_parser(ingreds):
         #items = [word for word in items if word not in words_to_remove]
         #if items:
             #ingred_list.append(" ".join(items))
-    #ingred_list = " ".join(ingred_list)            
+    ingred_list = " ".join(ingred_list)            
     return ingred_list
 
 
