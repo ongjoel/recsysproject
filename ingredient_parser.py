@@ -45,9 +45,9 @@ def ingredient_parser(ingreds):
         # Turn everything to lowercase
         items = [word.lower() for word in items]
         # remove accents
-        items = [unidecode.unidecode(word) for word in items]
+        #items = [unidecode.unidecode(word) for word in items]
         # Lemmatize words so we can compare words to measuring words
-        #items = [lemmatizer.lemmatize(word) for word in items]
+        items = [lemmatizer.lemmatize(word) for word in items]
         # get rid of stop words
         #stop_words = set(corpus.stopwords.words('english'))
         #items = [word for word in items if word not in stop_words]
