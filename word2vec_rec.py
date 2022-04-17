@@ -64,7 +64,7 @@ def ingredient_parser_final(ingredient):
         ingredients = ast.literal_eval(ingredient)
 
     ingredients = ",".join(ingredients)
-    ingredients = unidecode.unidecode(ingredients)
+    #ingredients = unidecode.unidecode(ingredients)
     return ingredients
 
 
