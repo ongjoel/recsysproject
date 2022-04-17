@@ -64,7 +64,7 @@ def ingredient_parser_final(ingredient):
         ingredients = ast.literal_eval(ingredient)
 
     ingredients = ",".join(ingredients)
-    #ingredients = unidecode.unidecode(ingredients)
+    ingredients = unidecode.unidecode(ingredients)
     return ingredients
 
 
@@ -160,7 +160,7 @@ def get_recs(ingredients, N=5, mean=False):
     if model:
         print("Successfully loaded model")
     # load in data
-    data = pd.read_csv("input/df_recipes.csv")
+    data = pd.read_csv("input/df_parsed.csv")
     # parse ingredients
     data["parsed"] = data.ingredients.apply(ingredient_parser)
     
